@@ -1,6 +1,6 @@
-# Laravel HTML Form
+# HTML Form Validation
 
-To get Form data, use Request object.
+Use validate() method with validation rules for each field name. If the validation fails, the controller sends the errors to view in $errors variable.
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
