@@ -7,11 +7,11 @@
 
 <form action="/login" method="post">
   @csrf
-  <input type="text" name="username" placeholder="Enter username"> <br>
+  <input type="text" name="username" placeholder="Enter username" value="{{old('username')}}"> <br>
   <span style="color:red;">@error('username'){{$message}}@enderror</span> <br>
 
-  <input type="password" name="password" placeholder="Enter password"> <br>
-  <span style="color:red;">@error('password'){{$message}}@enderror</span> <br>
+  <input type="password" name="password" placeholder="Enter password" value="{{old('password')}}"> <br>
+  <span style=" color:red;">@error('password'){{$message}}@enderror</span> <br>
 
   <button type="submit">Login</button>
 </form>
