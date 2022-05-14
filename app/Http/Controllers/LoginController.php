@@ -8,6 +8,10 @@ class LoginController extends Controller
 {
     public function store(Request $req)
     {
-        return $req->input();
+        $req->validate([
+            'username' => 'required',
+            'password' => 'required',
+        ]);
+        return $req;
     }
 }
