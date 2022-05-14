@@ -7,7 +7,7 @@
 
 <form action="/login" method="post">
   @csrf
-  <input type="email" name="email" placeholder="Enter email"> <br>
+  <input type="text" name="username" placeholder="Enter username"> <br>
   <span style="color:red;">@error('username'){{$message}}@enderror</span> <br>
 
   <input type="password" name="password" placeholder="Enter password"> <br>
