@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::view('user', 'user');
 Route::view('home', 'home');
 Route::view('noaccess', 'noaccess');
+
+Route::group(['middleware' => ['protectedPage']], function () {
+    Route::view('user', 'user');
+});
