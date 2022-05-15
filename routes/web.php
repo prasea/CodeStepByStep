@@ -16,12 +16,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::view('/login', 'login');
+// Route::view('/login', 'login');
+Route::get('/login', function () {
+    //Disabling /login route for logged in user
+    if (session()->has('username')) {
+        return redirect('/profile');
+    }
+    return view('login');
+});
+
 Route::post('/login', [App\Http\Controllers\AuthController::class, 'session']);
 
 Route::view('/profile', 'profile');
 
 Route::get('/logout', function () {
+    //Deleting the session
     if (session()->has('username')) {
         session()->pull('username');
     }
