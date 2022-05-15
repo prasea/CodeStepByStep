@@ -17,4 +17,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::view('/login', 'login');
-Route::get('/user', [App\Http\Controllers\UserController::class, 'getForm']);
+Route::post('/user', [App\Http\Controllers\UserController::class, 'postForm']);

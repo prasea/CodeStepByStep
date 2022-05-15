@@ -10,4 +10,8 @@ class UserController extends Controller
     {
         return $req;
     }
+    public function postForm(Request $req)
+    {
+        return $req;
+    }
 }
