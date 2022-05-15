@@ -1,4 +1,5 @@
-<form action="">
+<form action="/login" method="post">
+  @csrf
   <input type="text" name="username" placeholder="Enter username">
   <br><br>
   <input type="password" name="password" placeholder="Enter password">

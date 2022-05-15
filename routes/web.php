@@ -17,3 +17,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::view('/login', 'login');
+Route::post('/login', [App\Http\Controllers\AuthController::class, 'session']);
+
+Route::view('/profile', 'profile');
+
+Route::get('/logout', function () {
+    if (session()->has('username')) {
+        session()->pull('username');
+    }
+    return redirect('/login');
+});
