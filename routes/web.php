@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/user/firstmethod', [App\Http\Controllers\UsersController::class, 'usingDB']);
+Route::get('/user/secondmethod', [App\Http\Controllers\UsersController::class, 'usingModel']);
