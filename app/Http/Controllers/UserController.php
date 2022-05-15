@@ -14,4 +14,8 @@ class UserController extends Controller
     {
         return $req;
     }
+    public function putForm(Request $req)
+    {
+        return $req;
+    }
 }
